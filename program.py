@@ -3,15 +3,8 @@ import mysql.connector
 import uuid
 
 # CONNECT TO MYSQL DATABASE
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="YOUR_MYSQL_PASSWORD",
-    database="railway_reservation"
-)
-
+db = mysql.connector.connect(host="localhost", user="root", password="YOUR_MYSQL_PASSWORD", database="railway_reservation")
 cursor = db.cursor()
-
 
 def intro():
     print("=" * 60)
@@ -23,7 +16,6 @@ def intro():
 # 1. ADD A TRAIN
 def add_train():
     print("\nADD NEW TRAIN")
-
     train_no = int(input("Enter train number: "))
     train_name = input("Enter train name: ")
     source = input("Enter source: ")
